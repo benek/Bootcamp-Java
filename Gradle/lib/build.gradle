@@ -1,0 +1,24 @@
+plugins {
+    id("java")
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("com.google.guava:guava:32.1.1-jre")
+}
+
+task task3{
+    println("TASK3: This is executed during the configuration phase")
+    doFirst {
+        println("TASK3 - doFirst: This is executed during the execution phase")
+    }
+    doLast {
+        println("TASK3 - doLast: This is executed during the execution phase")
+    }
+}
