@@ -50,6 +50,45 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+// Custom task example
 task hello {
     println "Hello world"
+}
+
+// Groovy language capabilities example
+task helloUpper {
+    doLast {
+        String defaultName = 'javier benek'
+        println "Original: $defaultName"
+        println "New: ${defaultName.toUpperCase()}"
+    }
+}
+
+
+// Groovy n.times method example
+4.times { i ->
+    task "task$i" {
+        doLast {
+            println "I'm task number: $i"
+        }
+    }
+}
+
+// Class definition example
+class UserInfo {
+    String name
+    String email
+}
+
+// dependsOn example, and class usage
+task configure {
+    dependsOn tasks.hello
+    def user = configure(new UserInfo()) {
+        name = "Isaac Newton"
+        email = "isaac@newton.me"
+    }
+    doLast {
+        println user.name
+        println user.email
+    }
 }
