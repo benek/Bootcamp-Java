@@ -6,3 +6,5 @@ System.out.println("Hello world! " + i++);
 System.out.println("Hello world! " + i++);
 System.out.println("Hello world! " + i++);
 System.out.println("Hello world! " + i++);
+
+/exit

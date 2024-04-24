@@ -49,15 +49,18 @@ try (BufferedReader reader = new BufferedReader(new FileReader(plainText.toFile(
  * For large files or binary data: FileInputStream
  */
 
-    String filePath = "example.png";  // The path to the file to read
+String filePath = "example.png";  // The path to the file to read
 
-    try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
-        int content;
-        // Read one byte at a time
-        while ((content = fileInputStream.read()) != -1) {
-            // Converts byte to character because read() returns an int that represents a byte value
-            System.out.print((char) content);
-        }
-    } catch (IOException e) {
-        e.printStackTrace();
+try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
+    int content;
+    // Read one byte at a time
+    while ((content = fileInputStream.read()) != -1) {
+        // Converts byte to character because read() returns an int that represents a byte value
+        System.out.print((char) content);
     }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+
+/exit

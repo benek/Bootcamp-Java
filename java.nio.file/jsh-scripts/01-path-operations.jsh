@@ -83,3 +83,6 @@ System.out.println(path1.endsWith("foo"));
 for (Path s : path3.toAbsolutePath().normalize()) { // "../jsh-scripts"
     System.out.println(s);
 }
+
+
+/exit

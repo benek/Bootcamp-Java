@@ -117,3 +117,6 @@ System.out.println("isOther: " + attr.isOther());
 System.out.println("isRegularFile: " + attr.isRegularFile());
 System.out.println("isSymbolicLink: " + attr.isSymbolicLink());
 System.out.println("size: " + attr.size());
+
+
+/exit
